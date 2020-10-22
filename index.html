@@ -2,10 +2,173 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5 viewport-fit=cover">
+    <meta name="Description" content="Tony Keiser is a Full Stack Developer who enjoys front-end development. Tony builds beautiful and simple user interfaces to provide a great user experience.">
+    
     <title>Tony Keiser</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨🏽‍🚀</text></svg>">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/main.css?v=1" as="style">
+    <link rel="preload" href="css/_variables.css" as="style">
+    <link rel="preload" href="css/_utilities.css" as="style">
+    <link rel="stylesheet" href="css/main.css?v=1">
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <noscript>
+        <aside id="no-js">
+            JavaScript Disabled... are you feeling okay? 🤒
+        </aside>
+    </noscript>
+
+    <script>
+        try {
+            const mediaPrefersDark = window.matchMedia('(prefers-color-scheme: dark)')
+            const localPreference = window.localStorage.getItem('keisto-theme');
+
+            if (localPreference) {
+                if ((localPreference === 'system' && mediaPrefersDark.matches) || localPreference === 'dark') {
+                    document.documentElement.classList.add('theme--dark');
+                }
+            } else {
+                if (mediaPrefersDark.matches) {
+                    document.documentElement.classList.add('theme--dark');
+                }
+                window.localStorage.setItem('keisto-theme', 'system');
+            }
+        } catch (e) {}
+    </script>
+
+    <header class="container">
+        <nav aria-label="Social Links and Contact Detail">
+            <ul>
+                <li>
+                    <a href="//github.com/keisto" title="Follow Tony on Twitter" target="_blank" rel="noopener">Twitter</a>
+                </li>
+                <li>
+                    <a href="//github.com/keisto" title="Follow Tony on GitHub" target="_blank" rel="noopener">GitHub</a>
+                </li>
+                <li>
+                    <a href="mailto:keisertony@gmail.com" title="Contact Tony via Email">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h1 class="greeting">Hello, I'm <b>Tony&nbsp;Keiser</b></h1>
+                <div class="job-title">Full-Stack Developer, <span>but&nbsp;I&nbsp;prefer&nbsp;<b>Front-End</b></span></div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <article class="container">
+                <h2>Navo</h2>
+                <h3 class="mt-2">Mobile &amp; Web</h3>
+                <a class="mt-4" href="//navoapp.io" target="_blank" title="Go to Navo's Website" rel="noopener">Visit Site</a>
+                
+                <div class="screenshots navo">
+                    <img class="navo-web" src="/images/navo-web.png" alt="Navo Website Screenshot" width="996" height="721" loading="lazy">
+                    <img class="navo-phone-search" src="/images/navo-phone-search.png" alt="Navo App Screenshot - Searching" width="338" height="500" loading="lazy">
+                    <img class="navo-phone-detail" src="/images/navo-phone-detail.png" alt="Navo App Screenshot - Oil Well Details" width="338" height="500" loading="lazy">
+                </div>
+                
+                <div class="details">
+                    <div class="media">
+                        <img src="/images/navo-icon.jpg" alt="Navo Application Icon" width="156" height="156">
+                    </div>
+                    <div class="description">
+                        <h3>Description</h3>
+                        <p class="mt-2">
+                            Navo is a mobile application to help oil field works location oil and gas wells and use Google or 
+                            Apple maps for navigation. The website is currently a SPA to host the details of the app.
+                        </p>
+                        <h3 class="mt-4">Roadmap</h3>
+                        <p class="mt-2">
+                            I'm working on learning React Native to eventually rebuild and launch <b>version 3</b> in <b><time>2021</time></b>.
+                        </p>
+                    </div>
+                    <div class="history">
+                        <small><i>Current</i> Version: 2.4.1 - <b><time>2019</time></b></small>
+                        <small>Version: 1.0 - <b><time>2018</time></b></small>
+                    </div>
+                </div>
+            </article>
+        </section>
+        
+        <!-- <section id="about">
+            <div class="container">
+                <article class="card">
+                    <div class="card-header">
+                        <h1>About Me</h1>
+                    </div>
+                    
+                    <p>
+                        I'm a family man who's very motivated to learn and build beautify applications. I enjoy the outdoors ['hiking', 'camping', 'biking', 'swimming', 'boating', 'paintball'] along with indoor activities like ['cooking', 'video games', 'working out', 'wine', 'movies']
+                    </p>
+                    
+                    <p class="mt-4">I'm currently on a small team of developers at 
+                        <a href="//ulc.org" title="Empoyeer's main site" target="_blank" rel="nofollow">
+                        ULC</a>. Where we maintain few e-commerce websites and several static sites. Some of which I designed <em>(with some prerequisite)</em> and developed:
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="//ulclegaldefense.org" target="_blank" rel="nofollow">ULC Legal Defense <em>(Pending&nbsp;Review)</em></a>
+                        </li>
+                        <li>
+                            <a href="//universalday.org" target="_blank" rel="nofollow">Universal Day <em>(Front-End&nbsp;Only)</em></a>
+                        </li>
+                        <li>
+                            <a href="//savethe.vote" target="_blank" rel="nofollow">Save the Vote</a>
+                        </li>
+                        <li>
+                            <a href="//universallifechurchministers.org" target="_blank" rel="nofollow">ULC Celebrity Ministers</a>
+                        </li>
+                    </ul>
+                                        
+                    <p class="mt-4">
+                        After work I spend my time working on a few personal projects to help show case my skills and knowledge.     
+                    </p>
+                    
+                    <div class="social">
+                    </div>
+                </article>
+            </div>
+        </section> -->
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="select-wrapper">
+                <label class="sr-only" for="select-theme">Theme</label>
+                <svg xmlns="http://www.w3.org/2000/svg" class="light" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" role="img" aria-hidden="true" focusable="false">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <g class="light--on" stroke="#220022">
+                        <path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7" />
+                    </g>
+                    <path d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3" />
+                    <line x1="9.7" y1="17" x2="14.3" y2="17" />
+                </svg>
+                <select id="select-theme" aria-label="Select Theme">
+                    <option value="system">System</option>
+                    <option value="dark">Dark</option>
+                    <option value="light">Light</option>
+                </select>
+                <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" focusable="false">
+                    <path fill-rule="evenodd" d="M3.646 9.146a.5.5 0 0 1 .708 0L8 12.793l3.646-3.647a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708zm0-2.292a.5.5 0 0 0 .708 0L8 3.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708z"/>
+                </svg>
+            </div>
+            <a href="#hero" class="to-top" title="Scroll back to top">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" focusable="false">
+                    <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5zm-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </a>
+        </div>
+    </footer>
+    <script src="js/script.js?v=1" defer></script>
 </body>
 </html>
